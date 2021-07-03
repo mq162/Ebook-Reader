@@ -20,13 +20,13 @@ class ReaderCenterVC: BaseVC, UIGestureRecognizerDelegate {
     var bookPath: String
     var book: Book!
     var readingBegin: TimeInterval = 0
-    var pageViewController: IRPageViewController?
+    var pageViewController: UIPageViewController?
     /// 当前阅读页VC
     var currentReadingVC: ReadPageViewController!
     /// 上一页
     var beforePageVC: ReadPageViewController?
     /// 阅读记录
-    var readingRecord: IRReadingRecordModel!
+    var readingRecord: ReadingRecordModel!
     /// 当前阅读页文本起始位置
     var currentPageTextLoction: Int?
     /// 阅读导航栏
@@ -233,11 +233,11 @@ class ReaderCenterVC: BaseVC, UIGestureRecognizerDelegate {
         }
         
         if ReaderConfig.transitionStyle == .pageCurl {
-            pageViewController = IRPageViewController.init(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
+            pageViewController = UIPageViewController(transitionStyle: .pageCurl, navigationOrientation: .horizontal, options: nil)
             pageViewController?.isDoubleSided = true
             beforePageVC = nil
         } else {
-            pageViewController = IRPageViewController.init(transitionStyle: .scroll, navigationOrientation: .vertical, options: nil)
+            pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .vertical, options: nil)
         }
         
         pageViewController?.delegate = self
@@ -310,7 +310,7 @@ class ReaderCenterVC: BaseVC, UIGestureRecognizerDelegate {
     }
     
     func setupReadingRecord() {
-        readingRecord = IRReadingRecordManager.readingRecord(with: book.bookName)
+        readingRecord = ReadingRecordManager.readingRecord(with: book.bookName)
         let currentChapter = book.chapter(at: readingRecord.chapterIdx)
         var pageModel = currentChapter.page(at: readingRecord.pageIdx)
 
@@ -332,8 +332,8 @@ class ReaderCenterVC: BaseVC, UIGestureRecognizerDelegate {
         if readingRecord.chapterIdx == pageModel.chapterIdx && readingRecord.pageIdx == pageModel.pageIdx {
             return
         }
-        let readingRecord = IRReadingRecordModel(pageModel.chapterIdx, pageModel.pageIdx, pageModel.range)
-        IRReadingRecordManager.setReadingRecord(record: readingRecord, bookName: book.bookName)
+        let readingRecord = ReadingRecordModel(pageModel.chapterIdx, pageModel.pageIdx, pageModel.range)
+        ReadingRecordManager.setReadingRecord(record: readingRecord, bookName: book.bookName)
     }
     
     //MARK: - Gesture
@@ -376,9 +376,9 @@ class ReaderCenterVC: BaseVC, UIGestureRecognizerDelegate {
 }
 
 //MARK: - IRChapterListViewControllerDelagate
-extension ReaderCenterVC: IRChapterListViewControllerDelagate {
+extension ReaderCenterVC: ChapterListViewControllerDelagate {
     
-    func chapterListViewController(_ vc: IRChapterListViewController, didSelectTocReference tocReference: FRTocReference) {
+    func chapterListViewController(_ vc: ChapterListVC, didSelectTocReference tocReference: FRTocReference) {
         let chapterIndex = book.findChapterIndexByTocReference(tocReference)
         let currentChapter = book.chapter(at: chapterIndex)
         setupPageViewControllerWithPageModel(currentChapter.page(at: 0))
@@ -387,7 +387,7 @@ extension ReaderCenterVC: IRChapterListViewControllerDelagate {
         updateReadNavigationBarDispalyState(animated: false)
     }
     
-    func chapterListViewController(_ vc: IRChapterListViewController, didSelectBookmark bookmark: BookmarkModel) {
+    func chapterListViewController(_ vc: ChapterListVC, didSelectBookmark bookmark: BookmarkModel) {
         let currentChapter = book.chapter(at: bookmark.chapterIdx)
         setupPageViewControllerWithPageModel(currentChapter.page(in: bookmark.textLoction))
         
@@ -395,7 +395,7 @@ extension ReaderCenterVC: IRChapterListViewControllerDelagate {
         updateReadNavigationBarDispalyState(animated: false)
     }
     
-    func chapterListViewController(_ vc: IRChapterListViewController, deleteBookmark bookmark: BookmarkModel) {
+    func chapterListViewController(_ vc: ChapterListVC, deleteBookmark bookmark: BookmarkModel) {
         book.removeBookmark(bookmark, textRange: NSMakeRange(bookmark.textLoction, 1))
         updateBookmarkState()
     }
@@ -463,7 +463,7 @@ extension ReaderCenterVC: ReadNavigationBarDelegate, ReadBottomBarDelegate {
     }
     
     func readNavigationBar(didClickChapterList bar: ReadNavigationBar) {
-        let chapterVc = ChapterListViewController()
+        let chapterVc = ChapterListVC()
         chapterVc.delegate = self
         chapterVc.chapterList = book.flatChapterList
         chapterVc.bookmarkList = book.bookmarkList
@@ -481,7 +481,7 @@ extension ReaderCenterVC: ReadNavigationBarDelegate, ReadBottomBarDelegate {
         } else {
             let readSettingView = ReadSettingView()
             readSettingView.deleage = self
-            readSettingView.frame = CGRect.init(origin: CGPoint.zero, size: IRReadSettingView.viewSize)
+            readSettingView.frame = CGRect(origin: CGPoint.zero, size: ReadSettingView.viewSize)
             let popTipView = CMPopTipView.init(customView: readSettingView)
             popTipView?.has3DStyle = false
             popTipView?.animation = .slide
@@ -499,7 +499,7 @@ extension ReaderCenterVC: ReadNavigationBarDelegate, ReadBottomBarDelegate {
     
     func readNavigationBar(_ bar: ReadNavigationBar, didSelectBookmark isMark: Bool) {
         guard let pageModel = currentReadingVC.pageModel else { return }
-        let bookmark = BookmarkModel.init(chapterIdx: pageModel.chapterIdx, chapterName: pageModel.chapterName, textLoction: pageModel.range.location)
+        var bookmark = BookmarkModel(chapterIdx: pageModel.chapterIdx, chapterName: pageModel.chapterName, textLoction: pageModel.range.location)
         if book.isChinese {
             bookmark.content = String(pageModel.content.string.prefix(25)).replacingOccurrences(of: "\n", with: "")
         } else {
@@ -545,7 +545,7 @@ extension ReaderCenterVC: ReadNavigationBarDelegate, ReadBottomBarDelegate {
 }
 
 //MARK: - UIPageViewController
-extension IRReaderCenterViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+extension ReaderCenterVC: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     //MARK: - UIPageViewControllerDelegate
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
@@ -569,7 +569,7 @@ extension IRReaderCenterViewController: UIPageViewControllerDataSource, UIPageVi
             return
         }
         guard let preVc = previousViewControllers.first else { return }
-        if preVc.isKind(of: IRReadPageViewController.self) {
+        if preVc.isKind(of: ReadPageViewController.self) {
             currentReadingVC = preVc as? ReadPageViewController
             currentPageTextLoction = nil
         }
@@ -631,11 +631,11 @@ extension ReaderCenterVC: ReadSettingViewDelegate {
         book.parseBookMeta()
     }
     
-    func readSettingView(_ view: IRReadSettingView, transitionStyleDidChange newValue: IRTransitionStyle) {
+    func readSettingView(_ view: ReadSettingView, transitionStyleDidChange newValue: TransitionStyle) {
         setupPageViewControllerWithPageModel(currentReadingVC.pageModel)
     }
     
-    func readSettingView(_ view: IRReadSettingView, didChangeSelectColor color: IRReadColorModel) {
+    func readSettingView(_ view: ReadSettingView, didChangeSelectColor color: ReadColorModel) {
         readSettingView?.backgroundColor = view.backgroundColor
         readSettingView?.setNeedsDisplay()
         

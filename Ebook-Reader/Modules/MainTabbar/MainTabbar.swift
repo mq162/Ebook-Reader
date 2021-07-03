@@ -19,7 +19,7 @@ enum TabBarName: String {
     case explore   = "Explore"
 }
 
-final class IRMainViewController: UITabBarController, UITabBarControllerDelegate {
+final class MainTabbar: UITabBarController, UITabBarControllerDelegate {
 
     var initOnceAfterViewDidAppear = false
     lazy var bookshelfVC = BookshelfVC()

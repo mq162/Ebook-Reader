@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct BookModel {
+class BookModel {
     
     var coverImage: UIImage?
     var bookName: String
@@ -29,7 +29,7 @@ struct BookModel {
     }
     
     static func model(with bookMeta: FRBook, path: String, imageMaxWidth: CGFloat?) -> BookModel {
-        var book = BookModel.init(with: bookMeta.title ?? "No title", path: path)
+        let book = BookModel.init(with: bookMeta.title ?? "No title", path: path)
         if let coverUrl = bookMeta.coverImage?.fullHref {
             if let imageMaxWidth = imageMaxWidth {
                 book.coverImage = UIImage(contentsOfFile: coverUrl)?.scaled(toWidth:imageMaxWidth, scale: 2)

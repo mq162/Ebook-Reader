@@ -377,7 +377,7 @@
 
 	// Size of rounded rect
 	CGFloat rectWidth;
-
+    
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
         // iPad
         if (self.maxWidth) {

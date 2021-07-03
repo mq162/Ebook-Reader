@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BookshelfVC: BaseVC {
+class BookshelfVC: BaseVC, ReaderCenterDelegate {
     
     var collectionView: UICollectionView!
     var emptyView: EmptyView?

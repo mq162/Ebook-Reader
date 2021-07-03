@@ -4,7 +4,6 @@
 //
 //  Created by Quang Phạm on 03/07/2021.
 //
-
 import DTCoreText
 
 class ReadPageViewController: UIViewController {

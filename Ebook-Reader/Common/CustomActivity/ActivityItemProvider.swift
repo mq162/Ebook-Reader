@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import ZipArchive
 import LinkPresentation
+import ZipArchive
 
 class ActivityItemProvider: UIActivityItemProvider {
 

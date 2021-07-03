@@ -8,11 +8,8 @@
 
 import UIKit
 import AEXML
-#if COCOAPODS
-import SSZipArchive
-#else
 import ZipArchive
-#endif
+import DTFoundation
 
 open class FREpubParser: NSObject, SSZipArchiveDelegate {
 

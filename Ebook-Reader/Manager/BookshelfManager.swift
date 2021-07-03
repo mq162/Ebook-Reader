@@ -88,7 +88,7 @@ class BookshelfManager {
             guard let resultSet = $0 else { completion(nil, $1); return }
             var bookList = [BookModel]()
             while resultSet.next() {
-                var book = BookModel.init(with: resultSet.string(forColumn: kBookName)!, path: resultSet.string(forColumn: kBookPath)!)
+                let book = BookModel.init(with: resultSet.string(forColumn: kBookName)!, path: resultSet.string(forColumn: kBookPath)!)
                 if let imgData = resultSet.data(forColumn: kCoverImage) {
                     book.coverImage = UIImage(data: imgData)
                 }
@@ -109,7 +109,7 @@ class BookshelfManager {
             guard let resultSet = $0 else { completion(nil, $1); return }
             var bookList = [BookModel]()
             while resultSet.next() {
-                var book = BookModel(with: resultSet.string(forColumn: kBookName)!, path: resultSet.string(forColumn: kBookPath)!)
+                let book = BookModel(with: resultSet.string(forColumn: kBookName)!, path: resultSet.string(forColumn: kBookPath)!)
                 if let imgData = resultSet.data(forColumn: kCoverImage) {
                     book.coverImage = UIImage.init(data: imgData)
                 }

@@ -7,12 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791BF6E52690983800D0438C /* ReadSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6E42690983800D0438C /* ReadSettingView.swift */; };
+		791BF6E7269098AD00D0438C /* SwitchSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6E6269098AD00D0438C /* SwitchSettingView.swift */; };
+		791BF6E9269098D200D0438C /* BrightnessSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6E8269098D200D0438C /* BrightnessSettingView.swift */; };
+		791BF6EB2690990300D0438C /* ReadColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6EA2690990300D0438C /* ReadColorModel.swift */; };
+		791BF6ED2690993900D0438C /* ReadColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6EC2690993900D0438C /* ReadColorCell.swift */; };
+		791BF6EF2690996400D0438C /* ReadColorSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6EE2690996400D0438C /* ReadColorSettingView.swift */; };
+		791BF6F126909A6600D0438C /* FontSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6F026909A6600D0438C /* FontSettingView.swift */; };
+		791BF6F326909B0C00D0438C /* FontSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6F226909B0C00D0438C /* FontSelectView.swift */; };
+		791BF6F526909B3500D0438C /* FontModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6F426909B3500D0438C /* FontModel.swift */; };
+		791BF6F726909C0E00D0438C /* FontSelectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6F626909C0E00D0438C /* FontSelectCell.swift */; };
+		791BF6F926909C9200D0438C /* ArrowSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6F826909C9200D0438C /* ArrowSettingView.swift */; };
+		791BF6FB26909D2F00D0438C /* ReadingRecordManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6FA26909D2F00D0438C /* ReadingRecordManager.swift */; };
+		791BF6FD26909D5400D0438C /* ReadingRecordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6FC26909D5400D0438C /* ReadingRecordModel.swift */; };
+		791BF6FF26909DFA00D0438C /* ChapterListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF6FE26909DFA00D0438C /* ChapterListVC.swift */; };
+		791BF70126909EAD00D0438C /* ChapterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF70026909EAD00D0438C /* ChapterCell.swift */; };
+		791BF70326909F0800D0438C /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791BF70226909F0800D0438C /* BookmarkCell.swift */; };
+		791BF70C2690AAD500D0438C /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 791BF70B2690AAD500D0438C /* ZipArchive */; };
+		791BF70F2690AD1000D0438C /* DTCoreText in Frameworks */ = {isa = PBXBuildFile; productRef = 791BF70E2690AD1000D0438C /* DTCoreText */; };
 		799F10EB26900F84000E759E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F10EA26900F84000E759E /* AppDelegate.swift */; };
 		799F10ED26900F84000E759E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F10EC26900F84000E759E /* SceneDelegate.swift */; };
 		799F10F426900F85000E759E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799F10F326900F85000E759E /* Assets.xcassets */; };
 		799F10F726900F85000E759E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799F10F526900F85000E759E /* LaunchScreen.storyboard */; };
 		799F11002690102F000E759E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 799F10FF2690102F000E759E /* SnapKit */; };
-		799F110326901210000E759E /* ZipArchive in Frameworks */ = {isa = PBXBuildFile; productRef = 799F110226901210000E759E /* ZipArchive */; };
 		799F110626901232000E759E /* AEXML in Frameworks */ = {isa = PBXBuildFile; productRef = 799F110526901232000E759E /* AEXML */; };
 		799F110F26901328000E759E /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F110E26901328000E759E /* BaseVC.swift */; };
 		799F1111269013B7000E759E /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F1110269013B7000E759E /* UIImageExtension.swift */; };
@@ -64,8 +81,6 @@
 		799F117F269056AD000E759E /* BookChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F117E269056AD000E759E /* BookChapter.swift */; };
 		799F1181269056D7000E759E /* BookPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F1180269056D7000E759E /* BookPage.swift */; };
 		799F118326905784000E759E /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F118226905784000E759E /* BookmarkModel.swift */; };
-		799F1186269058C0000E759E /* DTCoreText in Frameworks */ = {isa = PBXBuildFile; productRef = 799F1185269058C0000E759E /* DTCoreText */; };
-		799F1189269058EC000E759E /* DTFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = 799F1188269058EC000E759E /* DTFoundation */; };
 		799F118B26905AB7000E759E /* ChapterTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F118A26905AB7000E759E /* ChapterTipView.swift */; };
 		799F118D26905B2A000E759E /* ReadBottomBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F118C26905B2A000E759E /* ReadBottomBar.swift */; };
 		799F118F26905B3A000E759E /* ReadNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799F118E26905B3A000E759E /* ReadNavigationBar.swift */; };
@@ -77,6 +92,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		791BF6E42690983800D0438C /* ReadSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadSettingView.swift; sourceTree = "<group>"; };
+		791BF6E6269098AD00D0438C /* SwitchSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchSettingView.swift; sourceTree = "<group>"; };
+		791BF6E8269098D200D0438C /* BrightnessSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrightnessSettingView.swift; sourceTree = "<group>"; };
+		791BF6EA2690990300D0438C /* ReadColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadColorModel.swift; sourceTree = "<group>"; };
+		791BF6EC2690993900D0438C /* ReadColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadColorCell.swift; sourceTree = "<group>"; };
+		791BF6EE2690996400D0438C /* ReadColorSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadColorSettingView.swift; sourceTree = "<group>"; };
+		791BF6F026909A6600D0438C /* FontSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSettingView.swift; sourceTree = "<group>"; };
+		791BF6F226909B0C00D0438C /* FontSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSelectView.swift; sourceTree = "<group>"; };
+		791BF6F426909B3500D0438C /* FontModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontModel.swift; sourceTree = "<group>"; };
+		791BF6F626909C0E00D0438C /* FontSelectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSelectCell.swift; sourceTree = "<group>"; };
+		791BF6F826909C9200D0438C /* ArrowSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrowSettingView.swift; sourceTree = "<group>"; };
+		791BF6FA26909D2F00D0438C /* ReadingRecordManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordManager.swift; sourceTree = "<group>"; };
+		791BF6FC26909D5400D0438C /* ReadingRecordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingRecordModel.swift; sourceTree = "<group>"; };
+		791BF6FE26909DFA00D0438C /* ChapterListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterListVC.swift; sourceTree = "<group>"; };
+		791BF70026909EAD00D0438C /* ChapterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterCell.swift; sourceTree = "<group>"; };
+		791BF70226909F0800D0438C /* BookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
 		799F10E726900F84000E759E /* Ebook-Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ebook-Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		799F10EA26900F84000E759E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		799F10EC26900F84000E759E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,15 +177,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				799F1186269058C0000E759E /* DTCoreText in Frameworks */,
+				791BF70F2690AD1000D0438C /* DTCoreText in Frameworks */,
 				799F110626901232000E759E /* AEXML in Frameworks */,
-				799F1189269058EC000E759E /* DTFoundation in Frameworks */,
 				799F116626904C83000E759E /* Reachability in Frameworks */,
 				799F116B26904F4A000E759E /* GCDWebServers in Frameworks */,
 				799F115E269049CD000E759E /* FMDB in Frameworks */,
 				799F11002690102F000E759E /* SnapKit in Frameworks */,
+				791BF70C2690AAD500D0438C /* ZipArchive in Frameworks */,
 				799F116326904B2F000E759E /* PKHUD in Frameworks */,
-				799F110326901210000E759E /* ZipArchive in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +247,7 @@
 				799F11552690461A000E759E /* UploadVC.swift */,
 				799F119626905DC1000E759E /* ReadPageViewController.swift */,
 				799F119826905E7B000E759E /* PageBackVC.swift */,
+				791BF6FE26909DFA00D0438C /* ChapterListVC.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -281,6 +312,17 @@
 				799F118C26905B2A000E759E /* ReadBottomBar.swift */,
 				799F118E26905B3A000E759E /* ReadNavigationBar.swift */,
 				799F119226905CA5000E759E /* ReadNavigationContent.swift */,
+				791BF6E42690983800D0438C /* ReadSettingView.swift */,
+				791BF6E6269098AD00D0438C /* SwitchSettingView.swift */,
+				791BF6E8269098D200D0438C /* BrightnessSettingView.swift */,
+				791BF6EC2690993900D0438C /* ReadColorCell.swift */,
+				791BF6EE2690996400D0438C /* ReadColorSettingView.swift */,
+				791BF6F026909A6600D0438C /* FontSettingView.swift */,
+				791BF6F226909B0C00D0438C /* FontSelectView.swift */,
+				791BF6F626909C0E00D0438C /* FontSelectCell.swift */,
+				791BF6F826909C9200D0438C /* ArrowSettingView.swift */,
+				791BF70026909EAD00D0438C /* ChapterCell.swift */,
+				791BF70226909F0800D0438C /* BookmarkCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -292,6 +334,9 @@
 				799F112126903A79000E759E /* ReadingTaskModel.swift */,
 				799F114826903FC2000E759E /* BookModel.swift */,
 				799F118226905784000E759E /* BookmarkModel.swift */,
+				791BF6EA2690990300D0438C /* ReadColorModel.swift */,
+				791BF6F426909B3500D0438C /* FontModel.swift */,
+				791BF6FC26909D5400D0438C /* ReadingRecordModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -356,6 +401,7 @@
 				799F115A2690477E000E759E /* SystemFileManager.swift */,
 				799F115F269049F9000E759E /* DBManager.swift */,
 				799F119426905D0B000E759E /* BookmarkManager.swift */,
+				791BF6FA26909D2F00D0438C /* ReadingRecordManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -407,14 +453,13 @@
 			name = "Ebook-Reader";
 			packageProductDependencies = (
 				799F10FF2690102F000E759E /* SnapKit */,
-				799F110226901210000E759E /* ZipArchive */,
 				799F110526901232000E759E /* AEXML */,
 				799F115D269049CD000E759E /* FMDB */,
 				799F116226904B2F000E759E /* PKHUD */,
 				799F116526904C83000E759E /* Reachability */,
 				799F116A26904F4A000E759E /* GCDWebServers */,
-				799F1185269058C0000E759E /* DTCoreText */,
-				799F1188269058EC000E759E /* DTFoundation */,
+				791BF70B2690AAD500D0438C /* ZipArchive */,
+				791BF70E2690AD1000D0438C /* DTCoreText */,
 			);
 			productName = "Ebook-Reader";
 			productReference = 799F10E726900F84000E759E /* Ebook-Reader.app */;
@@ -446,14 +491,13 @@
 			mainGroup = 799F10DE26900F84000E759E;
 			packageReferences = (
 				799F10FE2690102F000E759E /* XCRemoteSwiftPackageReference "SnapKit" */,
-				799F110126901210000E759E /* XCRemoteSwiftPackageReference "ZipArchive" */,
 				799F110426901232000E759E /* XCRemoteSwiftPackageReference "AEXML" */,
 				799F115C269049CD000E759E /* XCRemoteSwiftPackageReference "fmdb" */,
 				799F116126904B2F000E759E /* XCRemoteSwiftPackageReference "PKHUD" */,
 				799F116426904C83000E759E /* XCRemoteSwiftPackageReference "Reachability" */,
 				799F116926904F4A000E759E /* XCRemoteSwiftPackageReference "GCDWebServer" */,
-				799F1184269058C0000E759E /* XCRemoteSwiftPackageReference "DTCoreText" */,
-				799F1187269058EC000E759E /* XCRemoteSwiftPackageReference "DTFoundation" */,
+				791BF70A2690AAD500D0438C /* XCRemoteSwiftPackageReference "ZipArchive" */,
+				791BF70D2690AD1000D0438C /* XCRemoteSwiftPackageReference "DTCoreText" */,
 			);
 			productRefGroup = 799F10E826900F84000E759E /* Products */;
 			projectDirPath = "";
@@ -482,22 +526,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				799F10EB26900F84000E759E /* AppDelegate.swift in Sources */,
+				791BF6FB26909D2F00D0438C /* ReadingRecordManager.swift in Sources */,
+				791BF6F326909B0C00D0438C /* FontSelectView.swift in Sources */,
 				799F110F26901328000E759E /* BaseVC.swift in Sources */,
 				799F118D26905B2A000E759E /* ReadBottomBar.swift in Sources */,
 				799F1181269056D7000E759E /* BookPage.swift in Sources */,
 				799F113426903B7F000E759E /* FRSpine.swift in Sources */,
 				799F1116269015FF000E759E /* CurrentReadingCell.swift in Sources */,
 				799F118326905784000E759E /* BookmarkModel.swift in Sources */,
+				791BF6E7269098AD00D0438C /* SwitchSettingView.swift in Sources */,
 				799F113526903B7F000E759E /* FRMetadata.swift in Sources */,
 				799F113326903B7F000E759E /* FRSmilElement.swift in Sources */,
 				799F116E26904FEA000E759E /* ReaderConfig.swift in Sources */,
 				799F113926903B7F000E759E /* FRStringExtension.swift in Sources */,
 				799F117B269053B7000E759E /* CMPopTipView.m in Sources */,
 				799F117326905297000E759E /* StringExtension.swift in Sources */,
+				791BF6F526909B3500D0438C /* FontModel.swift in Sources */,
 				799F111B2690176F000E759E /* Constant.swift in Sources */,
 				799F114226903CD5000E759E /* MainTabbar.swift in Sources */,
 				799F113826903B7F000E759E /* FRMediaType.swift in Sources */,
 				799F114626903DD7000E759E /* ExploreVC.swift in Sources */,
+				791BF6E9269098D200D0438C /* BrightnessSettingView.swift in Sources */,
 				799F112226903A79000E759E /* ReadingTaskModel.swift in Sources */,
 				799F11542690450A000E759E /* ActivityItemProvider.swift in Sources */,
 				799F11562690461A000E759E /* UploadVC.swift in Sources */,
@@ -508,13 +557,20 @@
 				799F117F269056AD000E759E /* BookChapter.swift in Sources */,
 				799F1160269049F9000E759E /* DBManager.swift in Sources */,
 				799F113B26903B7F000E759E /* FRTocReference.swift in Sources */,
+				791BF6F926909C9200D0438C /* ArrowSettingView.swift in Sources */,
+				791BF6FD26909D5400D0438C /* ReadingRecordModel.swift in Sources */,
 				799F119326905CA5000E759E /* ReadNavigationContent.swift in Sources */,
+				791BF70326909F0800D0438C /* BookmarkCell.swift in Sources */,
 				799F119726905DC1000E759E /* ReadPageViewController.swift in Sources */,
+				791BF6EB2690990300D0438C /* ReadColorModel.swift in Sources */,
+				791BF6ED2690993900D0438C /* ReadColorCell.swift in Sources */,
 				799F1113269013F6000E759E /* UIColorExtension.swift in Sources */,
 				799F117D2690563D000E759E /* Book.swift in Sources */,
 				799F115B2690477E000E759E /* SystemFileManager.swift in Sources */,
+				791BF70126909EAD00D0438C /* ChapterCell.swift in Sources */,
 				799F113C26903B7F000E759E /* FRResources.swift in Sources */,
 				799F1176269052E0000E759E /* ReaderCenterVC.swift in Sources */,
+				791BF6E52690983800D0438C /* ReadSettingView.swift in Sources */,
 				799F119126905BB3000E759E /* UIControlExtension.swift in Sources */,
 				799F113A26903B7F000E759E /* FRBook.swift in Sources */,
 				799F113D26903B7F000E759E /* FRSmils.swift in Sources */,
@@ -522,16 +578,20 @@
 				799F1152269044E2000E759E /* CustomActivity.swift in Sources */,
 				799F116826904CAB000E759E /* Network.swift in Sources */,
 				799F10ED26900F84000E759E /* SceneDelegate.swift in Sources */,
+				791BF6F726909C0E00D0438C /* FontSelectCell.swift in Sources */,
 				799F1159269046CF000E759E /* BookshelfManager.swift in Sources */,
 				799F119926905E7B000E759E /* PageBackVC.swift in Sources */,
 				799F112426903B3C000E759E /* KYCircularProgress.swift in Sources */,
 				799F1171269051E1000E759E /* FontDownload.swift in Sources */,
 				799F1111269013B7000E759E /* UIImageExtension.swift in Sources */,
+				791BF6F126909A6600D0438C /* FontSettingView.swift in Sources */,
+				791BF6EF2690996400D0438C /* ReadColorSettingView.swift in Sources */,
 				799F114B26904096000E759E /* BookCell.swift in Sources */,
 				799F113F26903BC5000E759E /* HomeVC.swift in Sources */,
 				799F114F269043C1000E759E /* NotificationExtension.swift in Sources */,
 				799F111F26903A31000E759E /* ReadingTaskCell.swift in Sources */,
 				799F113726903B7F000E759E /* FREpubParser.swift in Sources */,
+				791BF6FF26909DFA00D0438C /* ChapterListVC.swift in Sources */,
 				799F114D269041B0000E759E /* EmptyView.swift in Sources */,
 				799F113226903B7F000E759E /* FRParseError.swift in Sources */,
 				799F118B26905AB7000E759E /* ChapterTipView.swift in Sources */,
@@ -612,6 +672,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -666,6 +727,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -737,20 +799,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		791BF70A2690AAD500D0438C /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ZipArchive/ZipArchive.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.2;
+			};
+		};
+		791BF70D2690AD1000D0438C /* XCRemoteSwiftPackageReference "DTCoreText" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Cocoanetics/DTCoreText.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.6.26;
+			};
+		};
 		799F10FE2690102F000E759E /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.1;
-			};
-		};
-		799F110126901210000E759E /* XCRemoteSwiftPackageReference "ZipArchive" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/ZipArchive/ZipArchive.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.4.2;
 			};
 		};
 		799F110426901232000E759E /* XCRemoteSwiftPackageReference "AEXML" */ = {
@@ -793,34 +863,23 @@
 				kind = branch;
 			};
 		};
-		799F1184269058C0000E759E /* XCRemoteSwiftPackageReference "DTCoreText" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Cocoanetics/DTCoreText.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.6.26;
-			};
-		};
-		799F1187269058EC000E759E /* XCRemoteSwiftPackageReference "DTFoundation" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Cocoanetics/DTFoundation.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.7.18;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		791BF70B2690AAD500D0438C /* ZipArchive */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 791BF70A2690AAD500D0438C /* XCRemoteSwiftPackageReference "ZipArchive" */;
+			productName = ZipArchive;
+		};
+		791BF70E2690AD1000D0438C /* DTCoreText */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 791BF70D2690AD1000D0438C /* XCRemoteSwiftPackageReference "DTCoreText" */;
+			productName = DTCoreText;
+		};
 		799F10FF2690102F000E759E /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 799F10FE2690102F000E759E /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		799F110226901210000E759E /* ZipArchive */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 799F110126901210000E759E /* XCRemoteSwiftPackageReference "ZipArchive" */;
-			productName = ZipArchive;
 		};
 		799F110526901232000E759E /* AEXML */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -846,16 +905,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 799F116926904F4A000E759E /* XCRemoteSwiftPackageReference "GCDWebServer" */;
 			productName = GCDWebServers;
-		};
-		799F1185269058C0000E759E /* DTCoreText */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 799F1184269058C0000E759E /* XCRemoteSwiftPackageReference "DTCoreText" */;
-			productName = DTCoreText;
-		};
-		799F1188269058EC000E759E /* DTFoundation */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 799F1187269058EC000E759E /* XCRemoteSwiftPackageReference "DTFoundation" */;
-			productName = DTFoundation;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

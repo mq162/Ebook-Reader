@@ -68,7 +68,7 @@ class BookmarkManager: NSObject {
         self.creatBookmarkTableIfNeeded(withName: tableName)
         
         let sql = "DELETE FROM \(tableName) WHERE chapterIdx = ? AND textLoction >= ? AND textLoction < ?"
-        let success = IRDBManager.shared.executeUpdate(sql, values: [chapterIdx, textRange.location, textRange.location + textRange.length])
+        let success = DBManager.shared.executeUpdate(sql, values: [chapterIdx, textRange.location, textRange.location + textRange.length])
         if !success {
             print("Delete failed")
         } else {
@@ -100,7 +100,7 @@ extension BookmarkManager {
                 let chapterName = resultSet.string(forColumn: "chapterName")
                 let content = resultSet.string(forColumn: "content")
      
-                let bookmark = BookmarkModel.init(chapterIdx: chapterIdx, chapterName: chapterName, textLoction: textLoction)
+                var bookmark = BookmarkModel(chapterIdx: chapterIdx, chapterName: chapterName, textLoction: textLoction)
                 bookmark.markTime = markTime
                 bookmark.content = content
                 bookmarkList.append(bookmark)
